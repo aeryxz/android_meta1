@@ -1,9 +1,10 @@
 ﻿#pragma strict
-var player1total = gameObject.Find("recordMove").GetComponent(chosenCombo).player1total;
-var player2total = gameObject.Find("recordMove").GetComponent(chosenCombo).player2total;
+var player1total : int;
+var player2total : int;
 
 function Start () {
-
+	player1total = gameObject.Find("recordMove").GetComponent(chosenCombo).player1total;
+	player2total = gameObject.Find("recordMove").GetComponent(chosenCombo).player2total;
 }
 
 function Update () {
@@ -51,5 +52,5 @@ function OnMouseDown () {
 	renderer.enabled = false;
 	collider.enabled = false;
 	gameObject.Find("nextTxt").GetComponent(TextMesh).renderer.enabled = false;
-	gameObject.Find("scoreStatus").GetComponent(TextMesh).text = "";
+	gameObject.Find("scoreStatus").GetComponent(TextMesh).text = "R -> G -> B -> R";
 }

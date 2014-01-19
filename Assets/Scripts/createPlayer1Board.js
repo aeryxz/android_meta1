@@ -10,7 +10,7 @@ function Update () {
 
 function CreateBoard() {
 	var prefab = Resources.Load("colourCube");
-	for (var i : int = 0;i < 3; i++) {
+	for (var i : int = -1;i < 3; i++) {
 		var cube1 : GameObject = Instantiate (prefab, Vector3(i, 0, 0), Quaternion.identity);
 		cube1.tag = "player1";
 		var cube2 : GameObject  = Instantiate (prefab, Vector3(i, 1, 0), Quaternion.identity);
